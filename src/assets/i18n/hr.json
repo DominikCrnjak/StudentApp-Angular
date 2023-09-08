@@ -1,0 +1,60 @@
+{
+    "language": {
+        "croatian": "Hrvatski",
+        "english": "Engleski"
+    },
+    "navbar": {
+        "username": "Korisničko ime",
+        "role": "Uloga",
+        "login": "Prijava",
+        "logout": "Odjava"
+    },
+    "login": {
+        "title": "Prijava",
+        "username": "Korisničko ime",
+        "password": "Lozinka",
+        "loginButton": "Prijava",
+        "loginError": "Neuspješna prijava! Provjerite podatke i pokušajte ponovno."
+    },
+    "main": {
+        "studentsLink": "Studenti"
+    },
+    "404": {
+        "pageNotFoundMessage": "Tražena stranica nije pronađena",
+        "returnToHomepage": "Povratak na početnu stranicu"
+    },
+    "403": {
+        "pageForbiddenMessage": "Nemate pravo pristupa traženoj stranici!",
+        "returnToHomepage": "Povratak na početnu stranicu"
+    },
+    "students": {
+        "title": "Popis studenata",
+        "create": "Dodaj novog studenta",
+        "firstName": "Ime",
+        "lastName": "Prezime",
+        "details": "Detalji",
+        "edit": "Uređivanje",
+        "delete": "Brisanje",
+        "createTitle": "Dodavanje novog studenta",
+        "editTitle": "Uređivanje podataka studenta",
+        "form": {
+            "firstName": "Ime",
+            "firstNamePlaceholder": "Unesite ime",
+            "lastName": "Prezime",
+            "lastNamePlaceholder": "Unesite prezime",
+            "jmbagPlaceholder": "Unesite JMBAG",
+            "jmbagError": "JMBAG mora sadržavati 10 znakova.",
+            "ects": "Broj ECTS bodova",
+            "ectsPlaceholder": "Unesite ECTS",
+            "cancel": "Odustani",
+            "save": "Spremi"
+        },
+        "detailsForm": {
+            "studentDetails": "Detalji studenta",
+            "tuitionPaymentMessage": "Student treba platiti školarinu.",
+            "courses": "Kolegiji na kojima je student upisan",
+            "notAttendingAnyCourse": "Student nije upisao ni jedan kolegij.",
+            "back": "Povratak na pregled studenata"
+        }
+    }
+}

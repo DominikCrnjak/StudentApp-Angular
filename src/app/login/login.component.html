@@ -1,0 +1,44 @@
+<div class="h-100">
+    <div class="container">
+        <div class="row justify-content-center pt-5">
+            <div class="col text-center">
+                <h1 class="display-3 text-dark">Student</h1>
+                <h3 class="text-uppercase text-muted">App</h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-6 h-100">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <form #authenticationForm="ngForm" class="form-signin" name="authenticationForm">
+                            <div class="text-center mb-4">
+                                <h1 class="h3 mb-3 font-weight-normal">{{'login.title' | translate}}</h1>
+                            </div>
+                            <div class="form-label-group mb-3">
+                                <label>{{'login.username' | translate}}</label>
+                                <input [(ngModel)]="userCredentials.username" [disabled]="authenticating" appInputAutofocus
+                                    autocomplete="username" class="form-control" name="username"
+                                    placeholder="Unesite korisničko ime" required type="username">
+                            </div>
+                            <div class="form-label-group">
+                                <label>{{'login.password' | translate}}</label>
+                                <input [(ngModel)]="userCredentials.password" [disabled]="authenticating"
+                                    autocomplete="current-password" class="form-control" name="password"
+                                    placeholder="Unesite lozinku" required type="password">
+                            </div>
+                            <button (click)="login()"
+                                [disabled]="!authenticationForm.valid || authenticating"
+                                class="btn btn-lg btn-primary btn-block mt-3" type="submit">{{'login.loginButton' | translate}}<span
+                                    class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                                    *ngIf="authenticating"></span>
+                            </button>
+                        </form>
+                        <div class="alert alert-danger mt-2" *ngIf="loginFailed">
+                            {{'login.loginError' | translate}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+{
+    "language": {
+        "croatian": "Croatian",
+        "english": "English"
+    },
+    "navbar": {
+        "username": "Username",
+        "role": "Role",
+        "login": "Login",
+        "logout": "Logout"
+    },
+    "login": {
+        "title": "Login",
+        "username": "Username",
+        "password": "Password",
+        "loginButton": "Login",
+        "loginError": "Login failed! Check your credentials and try again."
+    },
+    "main": {
+        "studentsLink": "Students"
+    },
+    "404": {
+        "pageNotFoundMessage": "The requested page was not found",
+        "returnToHomepage": "Return to home page"
+    },
+    "403": {
+        "pageForbiddenMessage": "Insufficient privileges to access this page!",
+        "returnToHomepage": "Return to home page"
+    },
+    "students": {
+        "title": "Students list",
+        "create": "Add new student",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "details": "Details",
+        "edit": "Edit",
+        "delete": "Delete",
+        "createTitle": "Create new student",
+        "editTitle": "Edit student data",
+        "form": {
+            "firstName": "First name",
+            "firstNamePlaceholder": "Enter first name",
+            "lastName": "Last name",
+            "lastNamePlaceholder": "Enter last name",
+            "jmbagPlaceholder": "Enter JMBAG",
+            "jmbagError": "JMBAG must contain 10 characters.",
+            "ects": "Number of ECTS points",
+            "ectsPlaceholder": "Enter ECTS",
+            "cancel": "Cancel",
+            "save": "Save"
+        },
+        "detailsForm": {
+            "studentDetails": "Student details",
+            "tuitionPaymentMessage": "Student has to pay tuition.",
+            "courses": "Courses student is attending",
+            "notAttendingAnyCourse": "Student is not attending any course.",
+            "back": "Return to students overview"
+        }
+    }
+}

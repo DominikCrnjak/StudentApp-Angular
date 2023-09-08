@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-6" *ngIf="student">
+    <div class="card">
+      <div class="card-header">
+        {{'students.detailsForm.studentDetails' | translate}}
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            {{student.jmbag}} <small id="jmbag" class="d-inline text-muted">(JMBAG)</small>
+          </div>
+          <div class="col-md-12">
+            {{student.numberOfECTS}} <small id="ects" class="d-inline text-muted">(ECTS)</small>
+          </div>
+          <div class="col-md-12" *ngIf="student.tuitionShouldBePaid">
+            {{'students.detailsForm.tuitionPaymentMessage' | translate}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6" *ngIf="courses">
+    <div class="card">
+      <div class="card-header">
+        {{'students.detailsForm.courses' | translate}}
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12" *ngFor="let course of courses">
+            {{course.name}}
+          </div>
+          <div class="col-md-12" *ngIf="courses.length === 0">
+            {{'students.detailsForm.notAttendingAnyCourse' | translate}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-outline-secondary float-right" routerLink="/students">{{'students.detailsForm.back' | translate}}</button>

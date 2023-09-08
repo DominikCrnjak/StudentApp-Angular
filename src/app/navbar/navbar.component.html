@@ -1,0 +1,66 @@
+<nav class="navbar fixed-top bg-light navbar-light navbar-expand-lg p-1 shadow-sm">
+    <a [routerLink]="['/']" class="navbar-brand">
+        <h3 class="ml-3 mb-0 mt-0 float-right" style="line-height: 40px">Student <span>APP</span></h3>
+    </a>
+
+    <button (click)="toggleNavbar()" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent"
+        data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+
+            <ul class="navbar-nav mr-auto" *ngIf="isUserLoggedIn()">
+                <li class="nav-item">
+                    <a class="nav-link cursor-pointer">
+                        <span>{{'navbar.username' | translate}}:{{userService?.currentUser?.username}}</span>
+                    </a>
+                </li>
+                <li *ngIf="isNavbarCollapsed" class="nav-item">
+                    <a class="nav-link cursor-pointer">
+                        <span>|</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cursor-pointer">
+                        <span>{{'navbar.role' | translate}}: <span *ngFor="let role of userService?.currentUser?.authorities">{{role}} </span></span>
+                    </a>
+                </li>
+                <li *ngIf="isNavbarCollapsed" class="nav-item">
+                    <a class="nav-link cursor-pointer">
+                        <span>|</span>
+                    </a>
+                </li>
+            </ul>
+
+         
+
+            <li class="nav-item" routerLink="/login" *ngIf="!isUserLoggedIn()">
+                <a class="nav-link cursor-pointer font-weight-bold" id="login">
+                    <span>{{'navbar.login' | translate}}</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <div ngbDropdown class="d-inline-block">
+                    <button class="btn btn-outline-secondary" id="languageDropdown"
+                        ngbDropdownToggle>{{currentLanguage}}</button>
+                    <div ngbDropdownMenu aria-labelledby="languageDropdown">
+                        <button ngbDropdownItem
+                            (click)="onLanguageChange('hr')">{{'language.croatian' | translate}}</button>
+                        <button ngbDropdownItem
+                            (click)="onLanguageChange('en')">{{'language.english' | translate}}</button>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link cursor-pointer font-weight-bold"  id="logout" (click)="logout()" *ngIf="isUserLoggedIn()">
+                    <span>{{'navbar.logout' | translate}}</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
